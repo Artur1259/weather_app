@@ -49,7 +49,7 @@ function App() {
           {data && 
           <div className="bottom">
           <div className="feels">
-            {data.main ? <p>{data.main.feels_like} K</p> : null}
+            {data.main ? celsius ? <p>{kelvinToCelsius(data.main.feels_like)} C°</p> : <p>{data.main.feels_like} K</p> : null}
             <span>Feels Like</span>
           </div>
           <div className="humidity">
